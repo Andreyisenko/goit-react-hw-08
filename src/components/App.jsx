@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <p>goit-react-hw-08</p>
+      <h1>goit-react-hw-08</h1>
     </>
   )
 }
