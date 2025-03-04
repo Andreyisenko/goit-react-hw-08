@@ -1,0 +1,25 @@
+.wraperContact {
+    background-color: blueviolet;
+    width: 440px;
+    margin: 20px auto;
+    height: 100%;
+    border: solid 1px;
+    border-radius: 20px;
+  }
+  .item {
+    flex-direction: row;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgb(182, 114, 114);
+    text-shadow: 1px 2px rgb(239, 183, 183);
+    margin: 10px auto;
+    width: 400px;
+    padding: 10px;
+    background-color: rgb(169, 172, 172);
+  }
+  .texte {
+    color: wheat;
+    background-color: brown;
+    font-size: 28px;
+    border-radius: 20px;
+  }
+  

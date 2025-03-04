@@ -4,6 +4,7 @@ const NotFound = () => {
     <div>
       <h2>NotFound 404...</h2>
       <p><FcReddit size={70}/></p>
+      <p>Come back...</p>
       </div>
   )
 }
