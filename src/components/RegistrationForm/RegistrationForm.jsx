@@ -1,6 +1,9 @@
 import { Field, Form, Formik } from "formik"
 import css from './RegistrationForm.module.css' 
+import { useDispatch } from "react-redux"
+import { register } from "../../redux/auth/operations"
 const RegistrationForm = () => {
+  const dispatch = useDispatch()
   const initialValues ={
 name: '',
 email: '',
@@ -8,6 +11,7 @@ password: '',
   }
   const handleSubmit = (values, options)=>{
 console.log(values);
+dispatch(register(values))
 options.resetForm()
   }
   return (
