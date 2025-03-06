@@ -8,18 +8,22 @@ import RegistrationPage from '../pages/RegistrationPage/RegistrationPage';
 import LoginPage from '../pages/LoginPage/LoginPage';
 // import AppBar from './AppBar/AppBar';
 import Layout from './Layout';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { refreshUser } from '../redux/auth/operations';
+import { selectIsRefreshing } from '../redux/auth/selectors';
 // import { useDispatch } from 'react-redux';
 // import { useEffect } from 'react';
 // import { fetchContacts } from '../redux/contacts/operations';
 function App() {
+// const dispatch = useDispatch()
+  const dispatch = useDispatch();
+const isRefreshing = useSelector(selectIsRefreshing)
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
 
-  // const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
-
-  return (
+  return isRefreshing ? null : (
   
      
       <Routes>

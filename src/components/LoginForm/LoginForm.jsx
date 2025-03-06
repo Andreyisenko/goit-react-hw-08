@@ -41,7 +41,7 @@ const LoginForm = () => {
           </button>
         </Form>
       </Formik>
-      <p>111@gmail.com</p>
+      <p>partalogni@gufum.com</p>
     </div>
   );
 };

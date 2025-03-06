@@ -79,18 +79,19 @@ export const refreshUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
     // Reading the token from the state via getState()
-    const state = thunkAPI.getState();
-    const persistedToken = state.auth.token;
 
-    if (persistedToken === null) {
-      // If there is no token, exit without performing any request
-      return thunkAPI.rejectWithValue('Unable to fetch user');
-    }
+    // const persistedToken = state.auth.token;
 
     try {
+      const savedToken = thunkAPI.getState().auth.token;
+      console.log(savedToken);
+      if (savedToken === null) {
+        // If there is no token, exit without performing any request
+        return thunkAPI.rejectWithValue('Token is not exist! ');
+      }
       // If there is a token, add it to the HTTP header and perform the request
-      setAuthHeader(persistedToken);
-      const res = await api.get('/users/me');
+      setAuthHeader(savedToken);
+      const res = await api.get('/users/current');
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
