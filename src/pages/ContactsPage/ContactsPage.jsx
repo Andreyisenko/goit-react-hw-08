@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { fetchContacts } from '../../redux/contacts/operations';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import ContactForm from '../../components/ContactForm/ContactForm';
+import PrivateRoute from '../../components/PrivateRoute';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -14,9 +15,11 @@ const ContactsPage = () => {
 
   return (
     <div>
+      <PrivateRoute>
       <ContactForm/>
       <SearchBox />
       <ContactList />
+      </PrivateRoute>
     </div>
   );
 };

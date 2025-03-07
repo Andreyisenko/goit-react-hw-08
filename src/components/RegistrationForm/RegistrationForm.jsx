@@ -2,6 +2,7 @@ import { Field, Form, Formik } from "formik"
 import css from './RegistrationForm.module.css' 
 import { useDispatch } from "react-redux"
 import { register } from "../../redux/auth/operations"
+import { Link } from "react-router-dom"
 const RegistrationForm = () => {
   const dispatch = useDispatch()
   const initialValues ={
@@ -32,6 +33,7 @@ options.resetForm()
       <Field className={css.inputReg} name='password' type='password'/>
     </label>
     <button  className={css.buttonReg}type="submit">Register</button>
+    <p>You already have account ? <Link to='/login'><b> Log in! </b></Link></p>
   </Form>
 </Formik>
 <p>111@gmail.com</p>

@@ -2,7 +2,7 @@ import { Field, Form, Formik, replace } from 'formik';
 import css from './LoginForm.module.css';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 const LoginForm = () => {
   const initialValues = {
@@ -39,6 +39,8 @@ const LoginForm = () => {
           <button className={css.buttonReg} type="submit">
           Login
           </button>
+          <p>You do not have account yet? <Link to='/register'> <b>Get IT! </b></Link></p>
+         
         </Form>
       </Formik>
       <p>partalogni@gufum.com</p>
