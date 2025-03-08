@@ -37,13 +37,14 @@ const LoginForm = () => {
             <Field className={css.inputReg} name="password" type="password" />
           </label>
           <button className={css.buttonReg} type="submit">
-          Login
+          <b>Login</b>
           </button>
           <p>You do not have account yet? <Link to='/register'> <b>Get IT! </b></Link></p>
          
         </Form>
       </Formik>
       <p>partalogni@gufum.com</p>
+      <p>Petroartalogni@gufum.com</p>
     </div>
   );
 };

@@ -32,7 +32,7 @@ options.resetForm()
       <span>Password:</span>
       <Field className={css.inputReg} name='password' type='password'/>
     </label>
-    <button  className={css.buttonReg}type="submit">Register</button>
+    <button  className={css.buttonReg}type="submit"><b>Register</b></button>
     <p>You already have account ? <Link to='/login'><b> Log in! </b></Link></p>
   </Form>
 </Formik>
