@@ -23,6 +23,8 @@ const authPersistConfig = {
   storage,
   whitelist: ['token'],
 };
+console.log(import.meta.env.MODE);
+const stage = import.meta.env.MODE
 
 export const store = configureStore({
   reducer: {
@@ -37,7 +39,9 @@ export const store = configureStore({
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-  devTools: process.env.NODE_ENV === 'development',
+    devTools: stage === 'development' ? true : false,
+
+  // devTools: process.env.NODE_ENV === 'development',
 });
 
 
