@@ -23,28 +23,23 @@ const authPersistConfig = {
   storage,
   whitelist: ['token'],
 };
-console.log(import.meta.env.MODE);
-const stage = import.meta.env.MODE
+// const stage = import.meta.env.MODE;
 
 export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
-    // tasks: tasksReducer,
     contacts: contactsReducer,
     filter: filterReducer,
   },
-  middleware: (getDefaultMiddleware) =>
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
-    devTools: stage === 'development' ? true : false,
-
-  // devTools: process.env.NODE_ENV === 'development',
+  // devTools: stage === 'development' ? true : false,
+  devTools: true,
 });
-
-
 
 // export const store = configureStore({
 //   reducer: {
@@ -54,5 +49,3 @@ export const store = configureStore({
 // });
 
 export const persistor = persistStore(store);
-
-

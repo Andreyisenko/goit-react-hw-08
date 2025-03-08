@@ -11,24 +11,25 @@
   }
 
 .link {
-    color: rgb(201, 143, 8);
+    color:rgb(135, 226, 132);
     font-size: 26px;
     text-decoration: none;
   }
-  
+/*   
   .active {
     color: rgb(81, 79, 76);
     text-decoration: underline;
-    background-color: rgb(231, 189, 6);
+    background-color: rgb(194, 255, 39);
     border-radius: 10px;
-  }
+  } */
   .link:hover, .link:focus {
-    color: rgb(27, 26, 24);
+    color: rgb(221, 106, 108);
     border-radius: 10px;
-    background-color: rgb(231, 189, 6);
+    background-color: rgb(194, 255, 39);
   }
 
   .navI {
     display: flex;
 justify-content: center;
+gap: 20px;
   }
