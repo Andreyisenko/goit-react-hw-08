@@ -19,15 +19,6 @@ const Navigation = () => {
             ContactsPage
           </NavLink>
         )}
-
-        {/* <NavLink className={buildLinkClass} to="/register">
-          RegistrationPage
-        </NavLink> */}
-        {/* <NavLink className={buildLinkClass} to="/login">
-          LoginPage
-        </NavLink> */}
-
-        {/* <NavLink to='*'>NotFound</NavLink> */}
       </nav>
     </div>
   );

@@ -16,9 +16,9 @@ const ContactsPage = () => {
   return (
     <div>
       <PrivateRoute>
-      <ContactForm/>
-      <SearchBox />
-      <ContactList />
+        <ContactForm />
+        <SearchBox />
+        <ContactList />
       </PrivateRoute>
     </div>
   );

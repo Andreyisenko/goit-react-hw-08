@@ -1,61 +1,56 @@
 .forma {
-    background-color:rgb(111, 111, 172);
-    display: flex;
-    flex-direction: column;
-    width: 440px;
-    margin: 20px auto;
-    height: 300px;
-    border: solid 1px;
-    border-radius: 4px;
-    height: auto;
-  }
-  .user {
-    /* color: yellow; */
-    margin: 0 auto;
-    width: 300px;
-    border-radius: 4px;
-    border: solid 1px;
-  }
-  
-  .userN {
-    color:rgb(194, 255, 39);
-    font-size: 24px;
-  }
-  
-  .numB {
-    margin-top: 20px;
-    color:rgb(194, 255, 39);
-    font-size: 24px;
-  }
-  
-  .spn {
-    color: red;
-  }
-  .num {
-    /* color: yellow; */
-    margin: 0 auto;
-    width: 300px;
-    /* background-color: rgb(129, 236, 184); */
-    border-radius: 4px;
-    border: solid 1px;
-  }
-  .btn {
-    margin: 0 auto;
-    color: black;
-    background-color: rgb(194, 255, 39);
-    margin-top: 10px;
-    border: none;
-    border-radius: 4px;
-    width: 100px;
-    height: 30px;
-    margin-top: 50px;
-    margin-bottom: 10px;
-    transition: all 350ms ease-in-out;
+  background-color: rgb(111, 111, 172);
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  margin: 20px auto;
+  height: 300px;
+  border: solid 1px;
+  border-radius: 4px;
+  height: auto;
+}
+.user {
+  margin: 0 auto;
+  width: 300px;
+  border-radius: 4px;
+  border: solid 1px;
+}
 
-  }
-  .btn:hover,
-  .btn:focus {
-    background-color: rgb(57, 144, 211);
-color: rgb(197, 237, 116);
-  }
-  
+.userN {
+  color: rgb(194, 255, 39);
+  font-size: 24px;
+}
+
+.numB {
+  margin-top: 20px;
+  color: rgb(194, 255, 39);
+  font-size: 24px;
+}
+
+.spn {
+  color: red;
+}
+.num {
+  margin: 0 auto;
+  width: 300px;
+  border-radius: 4px;
+  border: solid 1px;
+}
+.btn {
+  margin: 0 auto;
+  color: black;
+  background-color: rgb(194, 255, 39);
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  width: 100px;
+  height: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  transition: all 350ms ease-in-out;
+}
+.btn:hover,
+.btn:focus {
+  background-color: rgb(57, 144, 211);
+  color: rgb(197, 237, 116);
+}
