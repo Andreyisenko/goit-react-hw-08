@@ -22,11 +22,13 @@ function App() {
   }, [dispatch]);
 
   return isRefreshing ? null : (
+    
+    <Layout>
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route path="contacts" element={<ContactsPage />} />
-      </Route>
+      <Route path="/" element={<HomePage />}/>
+        {/* <Route index element={<HomePage />} /> */}
+        <Route path="/contacts" element={<ContactsPage />} />
+      {/* </Route> */}
       <Route path="register" element={<RegistrationPage />} />
       <Route
         path="login"
@@ -36,6 +38,7 @@ function App() {
       />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </Layout>
   );
 }
 

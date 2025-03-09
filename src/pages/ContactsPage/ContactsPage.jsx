@@ -15,11 +15,16 @@ const ContactsPage = () => {
 
   return (
     <div>
-      <PrivateRoute>
-        <ContactForm />
-        <SearchBox />
-        <ContactList />
-      </PrivateRoute>
+      <PrivateRoute
+        component={
+          <div>
+            <ContactForm />
+            <SearchBox />
+            <ContactList />
+          </div>
+        }
+        redirectTo="/login"
+      />
     </div>
   );
 };
