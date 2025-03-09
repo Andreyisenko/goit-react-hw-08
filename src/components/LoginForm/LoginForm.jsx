@@ -79,8 +79,6 @@ const LoginForm = () => {
           </p>
         </Form>
       </Formik>
-      <p>partalogni@gufum.com</p>
-      <p>Petroartalogni@gufum.com</p>
     </div>
   );
 };
