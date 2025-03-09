@@ -7,11 +7,11 @@ const AuthNav = () => {
     };
   return (
     <div>
-      {/* <nav className={css.linkNav}> */}
+      <nav className={css.linkNav}>
         <NavLink className={buildLinkClass} to='/register'>RegistrationPage</NavLink>
     
     <NavLink className={buildLinkClass}  to='/login'>LoginPage</NavLink>
-    {/* </nav> */}
+    </nav>
     </div>
   )
 }

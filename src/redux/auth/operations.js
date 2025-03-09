@@ -41,11 +41,6 @@ export const register = createAsyncThunk(
     }
   }
 );
-/*
- * POST @ /users/login
- * body: { email, password }
- */
-// partalogni@gufum.com
 export const logIn = createAsyncThunk('auth/login', async (body, thunkAPI) => {
   try {
     const res = await api.post('/users/login', body);
@@ -57,10 +52,6 @@ export const logIn = createAsyncThunk('auth/login', async (body, thunkAPI) => {
   }
 });
 
-/*
- * POST @ /users/logout
- * headers: Authorization: Bearer token
- */
 export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     await api.post('/users/logout');

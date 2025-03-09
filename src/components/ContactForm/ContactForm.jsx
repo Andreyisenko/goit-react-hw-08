@@ -42,15 +42,27 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
         validationSchema={FeedbackSchema}
       >
+
+
+
         <Form className={css.forma}>
+
           <label className={css.userN} htmlFor={nameFieldId}>
             Username
           </label>
+
+
           <Field className={css.user} name="name" id={nameFieldId} />
           <ErrorMessage className={css.spn} name="name" component="span" />
+         
+         
+         
+         
           <label className={css.numB} htmlFor={telFieldId}>
             Number
           </label>
+
+          
           <Field
             className={css.num}
             name="number"

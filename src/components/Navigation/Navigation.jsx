@@ -10,7 +10,6 @@ const Navigation = () => {
   };
   return (
     <div>
-      Navigation
       <nav className={css.linkNav}>
         <NavLink className={buildLinkClass} to="/">
           HomePage

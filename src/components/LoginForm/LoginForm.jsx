@@ -1,10 +1,31 @@
-import { Field, Form, Formik, replace } from 'formik';
+import { ErrorMessage, Field, Form, Formik, replace } from 'formik';
 import css from './LoginForm.module.css';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
 import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { useId } from 'react';
+import * as Yup from 'yup';
+
 const LoginForm = () => {
+
+
+  const emailFieldId = useId();
+  const pasFieldId = useId();
+  // const dispatch = useDispatch();
+  const FeedbackSchema = Yup.object().shape({
+    email: Yup.string()
+      .min(3, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
+      password: Yup.string()
+      .min(3, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
+  });
+
+
+  
   const initialValues = {
     email: '',
     password: '',
@@ -26,16 +47,23 @@ const LoginForm = () => {
   return (
     <div className={css.formWrap}>
       {/* RegistrationPage */}
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={FeedbackSchema}>
         <Form className={css.formReg}>
-          <label className={css.labelReg}>
+          <label htmlFor={emailFieldId} className={css.labelReg}>
             <span>Email:</span>
-            <Field className={css.inputReg} name="email" type="email" />
+            <Field className={css.inputReg} name="email" type="email" id={emailFieldId}/>
           </label>
-          <label className={css.labelReg}>
+          <ErrorMessage className={css.spn} name="email" component="span" />
+          
+
+
+
+          <label htmlFor={pasFieldId} className={css.labelReg}>
             <span>Password:</span>
-            <Field className={css.inputReg} name="password" type="password" />
+            <Field className={css.inputReg} name="password" type="password" id={pasFieldId} />
           </label>
+          <ErrorMessage className={css.spn} name="password" component="span" />
+
           <button className={css.buttonReg} type="submit">
           <b>Login</b>
           </button>

@@ -3,14 +3,14 @@
     width: 400px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(106, 43, 161);
-    border-radius: 20px;
+    background-color:  rgb(111, 111, 172);
+    border-radius: 4px;
     border: solid 1px;
   }
   .inp {
     margin: 10px auto;
     width: 200px;
     height: 30px;
-    border-radius: 20px;
+    border-radius: 4px;
   }
   
