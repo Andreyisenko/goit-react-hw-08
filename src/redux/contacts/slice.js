@@ -29,9 +29,7 @@ const slice = createSlice({
         state.items = state.items.filter(item => item.id !== action.payload);
       })
       .addCase(logOut.fulfilled, state => {
-        state.user = { name: '', email: '' };
-        state.token = '';
-        state.isLoggedIn = false;
+        state.items = [];
       })
       .addCase(addContact.fulfilled, (state, action) => {
         state.items.push(action.payload);
