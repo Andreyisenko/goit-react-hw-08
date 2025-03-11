@@ -2,9 +2,10 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import css from './RegistrationForm.module.css';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { useId } from 'react';
+import toast from 'react-hot-toast';
 
 const RegistrationForm = () => {
   const nameFieldId = useId();
@@ -26,13 +27,22 @@ const RegistrationForm = () => {
   });
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const initialValues = {
     name: '',
     email: '',
     password: '',
   };
   const handleSubmit = (values, options) => {
-    dispatch(register(values));
+    dispatch(register(values))
+      .unwrap()
+
+      .then(res => {
+        toast.success(`Welcome page ${res.user.email}`);
+        navigate('/contacts', { replace: true });
+      })
+      .catch(() => toast.error('Invalid data'));
+
     options.resetForm();
   };
   return (
